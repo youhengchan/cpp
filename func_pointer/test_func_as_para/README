@@ -1,0 +1,11 @@
+I did an experiment and found out that function itself could not be
+ loaded as parameters
+
+From terminal I got these:
+
+(deeplearning) [chenhanxuan@idiospace test_func_as_para]$ g++ -g test.cpp
+test.cpp: In function ‘double definite_integrals(double (*)(double), double, double, double)’:
+test.cpp:14:36: error: expression cannot be used as a function
+   result += delta * (&p_func)(count);
+                                    ^
+
